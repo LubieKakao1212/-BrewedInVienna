@@ -9,6 +9,25 @@ using UnityEngine;
 
 namespace Dialog {
     public class DialogManager : MonoBehaviour {
+
+        public int LastSelectedOption { get; private set; }
+
+        public bool IsWaitingForOptions {
+            get {
+                var dialog = _currentDialog;
+                if (_currentDialog != null) {
+                    if (_currentDialogSegmentIndex == dialog.initial.Length) {
+                        if (_currentDialogSegmentIndex > dialog.initial.Length) {
+                            Debug.Log("Somethig went wrong during Waiting");
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+        
+        [SerializeField] private OptionManager options;
         
         [SerializeField] private TextMeshProUGUI dialogText;
         [SerializeField] private TMPWriter dialogWriter;
@@ -21,13 +40,27 @@ namespace Dialog {
 
         private Dialog _currentDialog = null;
         private int _currentDialogSegmentIndex = 0;
+
+        private bool isSegmentInit = false;
         
         [SerializeField] private string debugCurrentDialog;
         
-        void Start() {
-            ParseDialogs();
+        public void SelectOption(int idx) {
+            if (!IsWaitingForOptions) {
+                Debug.Log("Not Waiting for Option");
+                return;
+            }
+            LastSelectedOption = idx;
+            options.Hide();
+            EndDialog();
         }
 
+        void Start() {
+            ParseDialogs();
+            options.Subscribe(SelectOption);
+            dialogWriter.OnFinishWriter.AddListener(_ => OnFinishSegment());
+        }
+        
         private void ParseDialogs() {
             foreach (var asset in dialogAssets) {
                 _dialogs.Add(asset.name, ParseDialog(asset));
@@ -93,32 +126,42 @@ namespace Dialog {
             }
             var idx = _currentDialogSegmentIndex++;
             if (idx >= _currentDialog.initial.Length) {
-                //Init Responses
-                if (_currentDialog.HasResponse) {
-                    foreach (var response in _currentDialog.playerResponses) {
-                        Debug.Log(response);
-                    }   
-                }
-                else {
-                    Debug.LogWarning("No Responses");
-                }
                 return;
             }
             InitSegment(_currentDialog.initial[idx]);
         }
+
+        private void OnFinishSegment() {
+            if (!isSegmentInit && IsWaitingForOptions && dialogWriter.CurrentIndex > 0) {
+                options.ShowFrom(_currentDialog);
+            }
+        }
         
         private void InitSegment(string segment) {
+            isSegmentInit = true;
             dialogWriter.ResetWriter();
             dialogAnimator.ResetAnimations();
+            dialogText.text = segment;
             dialogWriter.StartWriter();
             dialogAnimator.StartAnimating();
-            dialogText.text = segment;
+            isSegmentInit = false;
         }
 
+        private void EndDialog() {
+            var next = _currentDialog.nextDialog;
+            if (string.IsNullOrEmpty(next)) {
+                return;
+            }
+            if (!_dialogs.ContainsKey(next)) {
+                throw new ApplicationException($"Missing dialog with name {next}");
+            }
+            InitDialog(next);
+        }
+        
         [Button]
         private void SkipNext() {
             if (dialogWriter.IsWriting) {
-                dialogWriter.SkipWriter(true);
+                dialogWriter.SkipWriter();
             }
             else {
                 InitNextSegment();

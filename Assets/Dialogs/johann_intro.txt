@@ -1,0 +1,6 @@
+johann|
+(do we need a dialog thing to show options cause none was provided in script)|
+-><color=silver>Good afternoon, Herr Johann. What’s your coffee of choice today?</color>|
+-><color=silver>Good to see you, Herr Johann. What kind of brew suits your mood this time</color>|
+-><color=silver>Hello, Herr Johann. What will it be today? Something familiar or perhaps something new?</color>|
+johann_order
