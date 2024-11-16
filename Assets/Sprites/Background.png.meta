@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 32aa9e075e0550e679d2e4e234b91e74
+guid: 0dc2e149c8a3212048fccd8569f2a5c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4516080578745774727
-    second: Kawiarnia_bez_mebli_0
+      213: -1955448553306655712
+    second: Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kawiarnia_bez_mebli_0
+      name: Background_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 782be21fb575cae30800000000000000
-      internalID: 4516080578745774727
+      spriteID: 024fa93b6e9dcd4e0800000000000000
+      internalID: -1955448553306655712
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kawiarnia_bez_mebli_0: 4516080578745774727
+      Background_0: -1955448553306655712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
