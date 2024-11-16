@@ -552,7 +552,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   rb: {fileID: 0}
-  speed: 5
+  speed: 3
 --- !u!212 &88959525
 SpriteRenderer:
   m_ObjectHideFlags: 0
