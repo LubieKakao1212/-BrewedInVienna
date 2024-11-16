@@ -46,7 +46,34 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\Dialog\Dialog.cs" />
+    <Compile Include="Assets\Scripts\Dialog\DialogManager.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\Dialogs\coffee.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+    <None Include="Assets\Dialogs\dialog1.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -401,11 +428,11 @@
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -797,6 +824,9 @@
     <Reference Include="Unity.2D.Common.Path.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="TMPEffects.SerializedCollections.Editor">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\TMPEffects.SerializedCollections.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
@@ -860,11 +890,17 @@
     <Reference Include="Unity.Rendering.LightTransport.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.Rendering.LightTransport.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="TMPEffects.NotifyObjectChanged">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\TMPEffects.NotifyObjectChanged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TMPEffects">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\TMPEffects.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
@@ -881,23 +917,26 @@
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Collections.Editor">
-      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.Editor">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="NaughtyAttributes.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\NaughtyAttributes.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="NaughtyAttributes.Core">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\NaughtyAttributes.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TMPEffects.Editor.TImeline">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\TMPEffects.Editor.TImeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
@@ -919,6 +958,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="TMPEffects.SerializedCollections">
+      <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\TMPEffects.SerializedCollections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>C:\Users\UuMuU\Documents\Unity\BrewedInVienna\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
