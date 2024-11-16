@@ -5,7 +5,12 @@ public class Drag : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D myRigidbody;
     private bool isDragging = false;
+    private bool isSnapped = false;
     private Vector2 offset;
+
+    // Double-click control
+    private float lastClickTime = 0f;
+    private const float doubleClickThreshold = 0.3f;
 
     void Start()
     {
@@ -17,7 +22,14 @@ public class Drag : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            TryStartDrag();
+            if (isSnapped)
+            {
+                HandleDoubleClick();
+            }
+            else
+            {
+                TryStartDrag();
+            }
         }
         else if (Input.GetMouseButton(0) && isDragging)
         {
@@ -31,7 +43,8 @@ public class Drag : MonoBehaviour
 
     void TryStartDrag()
     {
-        
+        if (isSnapped) return; 
+
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
@@ -39,54 +52,67 @@ public class Drag : MonoBehaviour
         {
             isDragging = true;
             offset = (Vector2)transform.position - mousePos;
+            
         }
     }
 
     void DragObject()
     {
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        myRigidbody.MovePosition(mousePos + offset);
+        myRigidbody.MovePosition(mousePos + offset); // Update position based on mouse
     }
 
     void EndDrag()
     {
         isDragging = false;
 
-        
+        // Check if object is dropped on a target
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<Collider2D>().bounds.size, 0f);
 
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("DropTarget"))
             {
-                Debug.Log("Dropped on target!");
-                SnapToTarget(collider.gameObject);
-                return;
+                Drop dropComponent = collider.gameObject.GetComponent<Drop>();
+
+                if (dropComponent != null)
+                {
+                    // Sadece ShotThinggy hedefe bağlanabilir
+                    if (gameObject.name == "ShottThingy")
+                    {
+                        Debug.Log("Dropped on target!");
+                        dropComponent.OnDrop(this.gameObject);
+                        isSnapped = true; // Sadece ShotThinggy için "snap" durumu aktif
+                    }
+                    else
+                    {
+                        Debug.Log("This object cannot stay on the target!");
+                    }
+                    return;
+                }
             }
         }
 
-        Debug.Log("Dropped, but not on a valid target.");
+        // ShotThinggy değilse, "snapped" durumu aktif olmayacak
+        isSnapped = false;
     }
 
-    private void SnapToTarget(GameObject target)
+    private void HandleDoubleClick()
     {
-        
-        transform.position = target.transform.position;
+        float timeSinceLastClick = Time.time - lastClickTime;
 
-        
-        GetComponent<SpriteRenderer>().color = Color.green;
-
-        
-        Animator draggableAnimator = GetComponent<Animator>();
-        if (draggableAnimator != null)
+        if (timeSinceLastClick <= doubleClickThreshold)
         {
-            draggableAnimator.SetTrigger("Dropped");
+            ReleaseFromSnap();
         }
+
+        lastClickTime = Time.time;
     }
-    void OnDrawGizmos()
+
+    public void ReleaseFromSnap()
     {
-        Gizmos.color = Color.green;
-        BoxCollider2D box = GetComponent<BoxCollider2D>();
-        Gizmos.DrawWireCube(transform.position, box.size);
+        Debug.Log("Object released from target!");
+        isSnapped = false;
+
     }
 }

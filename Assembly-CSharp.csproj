@@ -46,6 +46,8 @@
     <Analyzer Include="D:\Unity\editor\6000.0.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Drop.cs" />
+    <Compile Include="Assets\Scripts\MachineLogic.cs" />
     <Compile Include="Assets\Scripts\DragWithFeedback.cs" />
     <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
