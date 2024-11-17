@@ -19,4 +19,8 @@ public class Drag : MonoBehaviour
     public virtual void OnStartDrag() {
         
     }
+
+    public virtual void Drop() {
+        
+    }
 }

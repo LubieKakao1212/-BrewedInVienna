@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SnappingDrop : Drop
 {
-    [SerializeField] private Transform targetPosition;
+    [SerializeField] protected Transform targetPosition;
 
     [SerializeField]
     private List<string> acceptedTypes;
