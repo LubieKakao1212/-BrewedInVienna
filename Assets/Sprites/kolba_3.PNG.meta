@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kolba_3_0: 4179687648656066973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

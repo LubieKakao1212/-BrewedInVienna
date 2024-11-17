@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Whipped cream lid_0: -102666443938507579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
