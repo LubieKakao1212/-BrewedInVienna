@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970596625386787325, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
       propertyPath: m_Size.y
-      value: 0.24414802
+      value: 0.89717364
       objectReference: {fileID: 0}
     - target: {fileID: 7970596625386787325, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
       propertyPath: m_Offset.x
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970596625386787325, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
       propertyPath: m_Offset.y
-      value: -0.24595332
+      value: -0.26636004
       objectReference: {fileID: 0}
     - target: {fileID: 7970596625386787325, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
       propertyPath: m_IsTrigger
@@ -121,7 +121,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 168438582916334505, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4657960488452722726}
+      addedObject: {fileID: 8560268690599082868}
   m_SourcePrefab: {fileID: 100100000, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
 --- !u!4 &8177618677149678640 stripped
 Transform:
@@ -133,7 +133,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 168438582916334505, guid: 2a599ddc1b78c274c870c0e31628b57f, type: 3}
   m_PrefabInstance: {fileID: 8537547742180786089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4657960488452722726
+--- !u!114 &8560268690599082868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +142,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8371381984155237376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144ec8b358612d842b9eed4909af3c74, type: 3}
+  m_Script: {fileID: 11500000, guid: 288f4d3917cf50447b85e05e49509ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {fileID: 0}
+  targetPosition: {fileID: 6056773744067856294}
+  acceptedTypes:
+  - CoffePart
+  cupObjType: Cup
+  coffeeObjType: CoffePart

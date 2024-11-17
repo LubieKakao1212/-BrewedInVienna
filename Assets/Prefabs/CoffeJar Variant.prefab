@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2721090665785645016, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: CoffeJar
+      objectReference: {fileID: 0}
     - target: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_Name
       value: CoffeJar Variant
@@ -63,7 +67,7 @@ PrefabInstance:
     - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2060881900711490751, guid: 9b0cabb138eb88b4cac7705cfe4c2409, type: 3}
+      objectReference: {fileID: 2060881900711490751, guid: 16dea6227f9413559b01f44be884c4b7, type: 3}
     - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -74,37 +78,27 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9205536972221284409}
+      addedObject: {fileID: 3404347729756726731}
   m_SourcePrefab: {fileID: 100100000, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
 --- !u!1 &4999848067345137495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
   m_PrefabInstance: {fileID: 6406693176912578}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &9205536972221284409
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &3404347729756726731
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4999848067345137495}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf0d5683326cd448bdc22f77f227d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  Sprites:
+  - {fileID: 2060881900711490751, guid: 16dea6227f9413559b01f44be884c4b7, type: 3}
+  - {fileID: -5233754292448691699, guid: d739d7c8ddee48939833799f8253f601, type: 3}
+  - {fileID: -5224006926067520369, guid: c78806fcf085c87dda168d30b90d5974, type: 3}

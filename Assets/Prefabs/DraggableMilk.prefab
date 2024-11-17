@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2721090665785645016, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721090665785645016, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: Milk
+      objectReference: {fileID: 0}
     - target: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_Name
       value: DraggableMilk
@@ -66,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: -5110731548806032159, guid: 003cfd3def5b2ea4ab362b9991391849, type: 3}
     - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6358792002124019173, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_IsActive
@@ -75,40 +83,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1328725049797873843}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
---- !u!1 &6669172132509991286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
-  m_PrefabInstance: {fileID: 1871365704805536995}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1328725049797873843
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6669172132509991286}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
