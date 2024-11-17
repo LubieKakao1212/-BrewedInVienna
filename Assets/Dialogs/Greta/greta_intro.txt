@@ -1,0 +1,7 @@
+greta|
+OH finally!
+Felt like I've been waiting here for years,<shake>could have written at least 3 novels in the meantime!</shake>|
+-><color=#329977>We are very sorry for the inconvenience, the cafee gets very busy at this hour</color>|
+-><color=#329977>Don't you worry our cofee will most certainly compensate the wait</color>|
+-><color=#329977>We apologize profusely, we can offer a cofee on the house, for the wait</color>|
+greta_order
