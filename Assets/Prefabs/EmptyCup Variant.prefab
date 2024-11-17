@@ -126,7 +126,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversions:
   - type: Milk
-    thisStateOut: 3
+    thisStateOut: 2
+    thisStateIn: 1
+    otherStateIn: 0
+    otherStateOut: 0
+  - type: Creame
+    thisStateOut: 4
     thisStateIn: 1
     otherStateIn: 0
     otherStateOut: 0
