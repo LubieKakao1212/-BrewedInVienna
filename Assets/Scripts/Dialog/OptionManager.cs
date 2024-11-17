@@ -16,7 +16,7 @@ namespace Dialog {
         
         public void Hide() {
             foreach (var option in options) {
-                option.gameObject.SetActive(false);
+                option.Hide();
             }
         }
         

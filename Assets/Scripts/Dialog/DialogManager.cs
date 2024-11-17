@@ -101,7 +101,7 @@ namespace Dialog {
 
                 if (isInResponses) {
                     if (section.StartsWith("->")) {
-                        responses.Add(section);
+                        responses.Add(section.Substring(2));
                     }
                     else {
                         nextDialog = section;
@@ -116,6 +116,7 @@ namespace Dialog {
         private void InitDialog(string dialogName) {
             var dialog = _dialogs[dialogName];
             _currentDialog = dialog;
+            options.Hide();
             _currentDialogSegmentIndex = 0;
             InitNextSegment();
         }
