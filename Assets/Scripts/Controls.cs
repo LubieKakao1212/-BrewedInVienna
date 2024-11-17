@@ -53,6 +53,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkipDialog"",
+                    ""type"": ""Button"",
+                    ""id"": ""0118ddd7-310b-4734-bc46-58b38e855333"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -88,6 +97,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Mouseright"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""66060d8d-3273-44a7-89e3-164f5168ce0c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipDialog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,6 +119,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Mouseleft = m_Player.FindAction("Mouseleft", throwIfNotFound: true);
         m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
         m_Player_Mouseright = m_Player.FindAction("Mouseright", throwIfNotFound: true);
+        m_Player_SkipDialog = m_Player.FindAction("SkipDialog", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -168,6 +189,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Mouseleft;
     private readonly InputAction m_Player_MousePos;
     private readonly InputAction m_Player_Mouseright;
+    private readonly InputAction m_Player_SkipDialog;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -175,6 +197,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Mouseleft => m_Wrapper.m_Player_Mouseleft;
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputAction @Mouseright => m_Wrapper.m_Player_Mouseright;
+        public InputAction @SkipDialog => m_Wrapper.m_Player_SkipDialog;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -193,6 +216,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Mouseright.started += instance.OnMouseright;
             @Mouseright.performed += instance.OnMouseright;
             @Mouseright.canceled += instance.OnMouseright;
+            @SkipDialog.started += instance.OnSkipDialog;
+            @SkipDialog.performed += instance.OnSkipDialog;
+            @SkipDialog.canceled += instance.OnSkipDialog;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -206,6 +232,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Mouseright.started -= instance.OnMouseright;
             @Mouseright.performed -= instance.OnMouseright;
             @Mouseright.canceled -= instance.OnMouseright;
+            @SkipDialog.started -= instance.OnSkipDialog;
+            @SkipDialog.performed -= instance.OnSkipDialog;
+            @SkipDialog.canceled -= instance.OnSkipDialog;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -228,5 +257,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMouseleft(InputAction.CallbackContext context);
         void OnMousePos(InputAction.CallbackContext context);
         void OnMouseright(InputAction.CallbackContext context);
+        void OnSkipDialog(InputAction.CallbackContext context);
     }
 }

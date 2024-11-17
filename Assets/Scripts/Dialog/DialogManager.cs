@@ -6,6 +6,7 @@ using NUnit.Framework;
 using TMPEffects.Components;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Dialog {
@@ -13,6 +14,8 @@ namespace Dialog {
 
         public int LastSelectedOption { get; private set; }
 
+        private Controls Controls;
+        
         public bool IsWaitingForOptions {
             get {
                 var dialog = _currentDialog;
@@ -70,6 +73,10 @@ namespace Dialog {
             foreach (var asset in portraitAssets) {
                 _portraits.Add(asset.name, asset);
             }
+
+            Controls = new Controls();
+            Controls.Enable();
+            Controls.Player.SkipDialog.started += _ => SkipNext();
         }
         
         private void ParseDialogs() {
@@ -124,7 +131,7 @@ namespace Dialog {
             return new Dialog(initial.ToArray(), responses.ToArray(), nextDialog, speaker);
         }
 
-        private void InitDialog(string dialogName) {
+        public void InitDialog(string dialogName) {
             var dialog = _dialogs[dialogName];
             _currentDialog = dialog;
             portraitDisplay.sprite = _portraits[dialog.speaker];
@@ -164,6 +171,7 @@ namespace Dialog {
         private void EndDialog() {
             var next = _currentDialog.nextDialog;
             if (string.IsNullOrEmpty(next)) {
+                SceneManager.LoadScene(1);
                 return;
             }
             if (!_dialogs.ContainsKey(next)) {
@@ -190,6 +198,10 @@ namespace Dialog {
         
         void Update() {
             
+        }
+
+        public void OnDestroy() {
+            Controls.Disable();
         }
     }
 }

@@ -69,4 +69,8 @@ public class DragManager : MonoBehaviour {
             CurrentDrag = null;
         }
     }
+
+    private void OnDestroy() {
+        Controls.Disable();
+    }
 }
