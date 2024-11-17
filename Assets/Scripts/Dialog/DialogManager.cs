@@ -6,6 +6,7 @@ using NUnit.Framework;
 using TMPEffects.Components;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Dialog {
     public class DialogManager : MonoBehaviour {
@@ -28,6 +29,8 @@ namespace Dialog {
         }
         
         [SerializeField] private OptionManager options;
+
+        [SerializeField] private Image portraitDisplay;
         
         [SerializeField] private TextMeshProUGUI dialogText;
         [SerializeField] private TMPWriter dialogWriter;
@@ -36,7 +39,11 @@ namespace Dialog {
         [SerializeField]
         private List<TextAsset> dialogAssets;
 
+        [SerializeField]
+        private List<Sprite> portraitAssets;
+        
         private readonly Dictionary<string, Dialog> _dialogs = new();
+        private readonly Dictionary<string, Sprite> _portraits = new();
 
         private Dialog _currentDialog = null;
         private int _currentDialogSegmentIndex = 0;
@@ -59,6 +66,10 @@ namespace Dialog {
             ParseDialogs();
             options.Subscribe(SelectOption);
             dialogWriter.OnFinishWriter.AddListener(_ => OnFinishSegment());
+
+            foreach (var asset in portraitAssets) {
+                _portraits.Add(asset.name, asset);
+            }
         }
         
         private void ParseDialogs() {
@@ -116,6 +127,8 @@ namespace Dialog {
         private void InitDialog(string dialogName) {
             var dialog = _dialogs[dialogName];
             _currentDialog = dialog;
+            portraitDisplay.sprite = _portraits[dialog.speaker];
+            portraitDisplay.gameObject.SetActive(true);
             options.Hide();
             _currentDialogSegmentIndex = 0;
             InitNextSegment();
@@ -156,6 +169,7 @@ namespace Dialog {
             if (!_dialogs.ContainsKey(next)) {
                 throw new ApplicationException($"Missing dialog with name {next}");
             }
+            portraitDisplay.gameObject.SetActive(false);
             InitDialog(next);
         }
         
