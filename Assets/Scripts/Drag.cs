@@ -59,14 +59,14 @@ public class Drag : MonoBehaviour
     void DragObject()
     {
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        myRigidbody.MovePosition(mousePos + offset); // Update position based on mouse
+        myRigidbody.MovePosition(mousePos + offset); 
     }
 
     void EndDrag()
     {
         isDragging = false;
 
-        // Check if object is dropped on a target
+        
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<Collider2D>().bounds.size, 0f);
 
         foreach (Collider2D collider in colliders)
@@ -77,12 +77,12 @@ public class Drag : MonoBehaviour
 
                 if (dropComponent != null)
                 {
-                    // Sadece ShotThinggy hedefe bağlanabilir
+                    
                     if (gameObject.name == "ShottThingy")
                     {
                         Debug.Log("Dropped on target!");
                         dropComponent.OnDrop(this.gameObject);
-                        isSnapped = true; // Sadece ShotThinggy için "snap" durumu aktif
+                        isSnapped = true; 
                     }
                     else
                     {
@@ -93,7 +93,7 @@ public class Drag : MonoBehaviour
             }
         }
 
-        // ShotThinggy değilse, "snapped" durumu aktif olmayacak
+        
         isSnapped = false;
     }
 
