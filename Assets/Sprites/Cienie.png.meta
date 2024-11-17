@@ -150,6 +150,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -584,7 +597,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cienie_0: 6274098381269147656
+      Cienie_1: 4968638951871786491
+      Cienie_10: 412650532995766244
+      Cienie_11: -4042234510629242770
+      Cienie_12: -5246337766457662128
+      Cienie_13: 3605074844634841559
+      Cienie_14: -4588422192357281712
+      Cienie_15: 3159711939440505283
+      Cienie_16: -4246924987165988128
+      Cienie_17: 1458357547606825619
+      Cienie_18: -6938718132486663540
+      Cienie_2: -2795332626203011883
+      Cienie_3: -8071331392902222516
+      Cienie_4: -8702456834193753908
+      Cienie_5: 4855509109209312860
+      Cienie_6: -52768519179679959
+      Cienie_7: 672025307884031855
+      Cienie_8: -8443630088505907685
+      Cienie_9: -704484513094988192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
