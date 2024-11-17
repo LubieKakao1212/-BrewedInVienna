@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "New action",
+                    "name": "MousePos",
                     "type": "Value",
                     "id": "35988d9c-038c-42e3-8e49-37559d3e7e3f",
                     "expectedControlType": "Vector2",
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MousePos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -37,7 +37,7 @@ public class DragWithFeedback : MonoBehaviour
     {
         if (other.CompareTag("DropTarget"))  
         {
-            Debug.Log("Dragged to target!");
+            Debug.Log("Dragged to state!");
             
         }
     }

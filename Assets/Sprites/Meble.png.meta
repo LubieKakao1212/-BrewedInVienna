@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99dbca7d519b55245bbb3e90e97a046f
+guid: e29946a7ffc62ae39aeddd1629a6daa2
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -130,6 +130,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -509,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Meble_0: -5569345266166435193
+      Meble_1: -9079442129248521403
+      Meble_10: -8521653514180213311
+      Meble_11: 6851497583264456222
+      Meble_12: -1096412532513129520
+      Meble_13: 1513335817758038389
+      Meble_14: -1933385605201572944
+      Meble_15: 7198943578392924576
+      Meble_2: -5951961487401424696
+      Meble_3: -3755182462056521976
+      Meble_4: 1730896413859540777
+      Meble_5: 5367105551154278255
+      Meble_6: -8656104531469147140
+      Meble_7: 236174603225035221
+      Meble_8: 8641834795424286861
+      Meble_9: 1155342138858049393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

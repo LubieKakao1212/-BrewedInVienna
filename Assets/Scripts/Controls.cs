@@ -37,7 +37,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""MousePos"",
                     ""type"": ""Value"",
                     ""id"": ""35988d9c-038c-42e3-8e49-37559d3e7e3f"",
                     ""expectedControlType"": ""Vector2"",
@@ -74,7 +74,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""MousePos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -97,7 +97,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Mouseleft = m_Player.FindAction("Mouseleft", throwIfNotFound: true);
-        m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
+        m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
         m_Player_Mouseright = m_Player.FindAction("Mouseright", throwIfNotFound: true);
     }
 
@@ -166,14 +166,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Mouseleft;
-    private readonly InputAction m_Player_Newaction;
+    private readonly InputAction m_Player_MousePos;
     private readonly InputAction m_Player_Mouseright;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Mouseleft => m_Wrapper.m_Player_Mouseleft;
-        public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
+        public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
         public InputAction @Mouseright => m_Wrapper.m_Player_Mouseright;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -187,9 +187,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Mouseleft.started += instance.OnMouseleft;
             @Mouseleft.performed += instance.OnMouseleft;
             @Mouseleft.canceled += instance.OnMouseleft;
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
+            @MousePos.started += instance.OnMousePos;
+            @MousePos.performed += instance.OnMousePos;
+            @MousePos.canceled += instance.OnMousePos;
             @Mouseright.started += instance.OnMouseright;
             @Mouseright.performed += instance.OnMouseright;
             @Mouseright.canceled += instance.OnMouseright;
@@ -200,9 +200,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Mouseleft.started -= instance.OnMouseleft;
             @Mouseleft.performed -= instance.OnMouseleft;
             @Mouseleft.canceled -= instance.OnMouseleft;
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
+            @MousePos.started -= instance.OnMousePos;
+            @MousePos.performed -= instance.OnMousePos;
+            @MousePos.canceled -= instance.OnMousePos;
             @Mouseright.started -= instance.OnMouseright;
             @Mouseright.performed -= instance.OnMouseright;
             @Mouseright.canceled -= instance.OnMouseright;
@@ -226,7 +226,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMouseleft(InputAction.CallbackContext context);
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnMousePos(InputAction.CallbackContext context);
         void OnMouseright(InputAction.CallbackContext context);
     }
 }
