@@ -896,6 +896,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTransform: {fileID: 299435383}
   mapBounds: {fileID: 196594387}
+--- !u!95 &591963626 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 896265681868546245, guid: cd97ca27fdc5153b79b74576761132dd, type: 3}
+  m_PrefabInstance: {fileID: 1178229289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1598,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8081224944058475980, guid: cd97ca27fdc5153b79b74576761132dd, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 591963626}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -14,11 +14,8 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator.SetBool("isMoving", false);
-        animator.SetBool("facingUp", false);
-        animator.SetBool("facingDown", true);
-        animator.SetBool("facingLeft", false);
-        animator.SetBool("facingRight", false);
+        animator.SetInteger("verMovement", 0);
+        animator.SetInteger("horMovement", 0);
     }
 
     // Update is called once per frame
@@ -26,48 +23,9 @@ public class playerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        if (vertical != 0)
-        {
-            //animator.SetBool("isMoving", true);
-            
-            if (vertical < 0)
-            {
-                animator.SetBool("facingDown", true);
-                animator.SetBool("facingUp", false);
-            }
-            else
-            {
-                animator.SetBool("facingDown", false);
-                animator.SetBool("facingUp", true);
-            }
-        }
-        else if (vertical == 0 && horizontal != 0)
-        {
-            //animator.SetBool("isMoving", true);
-            
-            animator.SetBool("facingUp", false);
-            animator.SetBool("facingDown", false);
-
-            if (horizontal < 0)
-            {
-                animator.SetBool("facingRight", false);
-                animator.SetBool("facingLeft", true);
-            }
-            else
-            {
-                animator.SetBool("facingRight", true);
-                animator.SetBool("facingLeft", false);
-            }
-        }
-
-        if (rb.linearVelocity != Vector2.zero)
-        {
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
+        
+        animator.SetInteger("horMovement", (int)(horizontal * 10));
+        animator.SetInteger("verMovement", (int)(vertical * 10));
     }
 
     public void FixedUpdate()
