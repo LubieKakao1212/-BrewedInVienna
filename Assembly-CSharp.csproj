@@ -52,6 +52,7 @@
     <Compile Include="Assets\Scripts\MilkMetalCupDrop.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
     <Compile Include="Assets\Scripts\cameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CoffeeMachine.cs" />
     <Compile Include="Assets\Scripts\DragWithFeedback.cs" />
     <Compile Include="Assets\Scripts\Drag.cs" />
     <Compile Include="Assets\Scripts\StateBehaviour.cs" />
