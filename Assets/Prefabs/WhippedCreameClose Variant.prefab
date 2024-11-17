@@ -97,7 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf0d5683326cd448bdc22f77f227d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 6542036907755158001}
   Sprites:
   - {fileID: 1221296332761982545, guid: 00b2e5470e476b959a7c716d38edfa79, type: 3}
   - {fileID: 5846534560440713259, guid: 717907c03f397d841a27e915abf62653, type: 3}
+--- !u!212 &6542036907755158001 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+  m_PrefabInstance: {fileID: 2031202396670905775}
+  m_PrefabAsset: {fileID: 0}

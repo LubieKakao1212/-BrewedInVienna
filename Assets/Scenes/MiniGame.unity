@@ -699,37 +699,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829667923535363186, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
+      propertyPath: conversions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829667923535363186, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
+      propertyPath: conversions.Array.data[1].type
+      value: Creame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829667923535363186, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
+      propertyPath: conversions.Array.data[1].thisStateIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829667923535363186, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
+      propertyPath: conversions.Array.data[0].thisStateOut
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829667923535363186, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
+      propertyPath: conversions.Array.data[1].thisStateOut
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 795884225920711091, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4016556407309075616}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
---- !u!1 &4016556407309075610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 795884225920711091, guid: e744bb6ed49537144b8f1760f5853f0c, type: 3}
-  m_PrefabInstance: {fileID: 4016556407309075609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4016556407309075616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4016556407309075610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b22975ccabcaa64f8bc228059e36987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversions:
-  - type: Milk
-    thisStateOut: 0
-    thisStateIn: 0
-    otherStateIn: 1
-    otherStateOut: 3
 --- !u!1001 &4751486807829528160
 PrefabInstance:
   m_ObjectHideFlags: 0
