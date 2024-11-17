@@ -15,6 +15,7 @@ public class CoffeeFinishDrop : Drop {
             var state = drag.GetComponent<StateBehaviour>();
             if (acceptedStates.Contains(state.CurrentState)) {
                 if (++CoffeCounter >= 3) {
+                    GlobalState.iteration++;
                     SceneManager.LoadScene(GameScene);
                 }
                 state.SetState(0);
