@@ -15,6 +15,9 @@ namespace Dialog {
         public int LastSelectedOption { get; private set; }
 
         private Controls Controls;
+
+        [SerializeField]
+        private GameObject dialogRoot;
         
         public bool IsWaitingForOptions {
             get {
@@ -133,6 +136,7 @@ namespace Dialog {
 
         public void InitDialog(string dialogName) {
             var dialog = _dialogs[dialogName];
+            dialogRoot.SetActive(true);
             _currentDialog = dialog;
             portraitDisplay.sprite = _portraits[dialog.speaker];
             portraitDisplay.gameObject.SetActive(true);

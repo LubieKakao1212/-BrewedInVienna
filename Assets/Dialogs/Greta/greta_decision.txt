@@ -2,3 +2,6 @@ greta|
 <color=#93ada5><i>Listen and listen well because,<shake>I'm not</shake> going to repeat myself twice</i></color>|
 <color=#9c4141><i>One black</color>,<color=#c43f3f> one with milk</color> <color=#f53131>and one with foamed milk</color></i>|
 <color=#93ada5><i>And you better be <grow>quick!!</grow></i></color>|
+->Ok|
+->Ok|
+->Ok|
