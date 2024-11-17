@@ -1,8 +1,10 @@
 using System;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Object = UnityEngine.Object;
 
 public class DragManager : MonoBehaviour {
 
@@ -58,7 +60,7 @@ public class DragManager : MonoBehaviour {
 
             foreach (var hit in hits) {
                 var drop = hit.GetComponent<Drop>();
-                if (drop != null) {
+                if (drop != null && drop.gameObject != CurrentDrag.gameObject) {
                     drop.OnDrop(CurrentDrag);
                     break;
                 }
