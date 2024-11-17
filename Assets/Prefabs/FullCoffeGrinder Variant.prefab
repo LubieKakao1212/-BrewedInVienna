@@ -71,7 +71,11 @@ PrefabInstance:
     - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1263509875867978938, guid: f88e834c4420bac4caf8b773948d6f17, type: 3}
+      objectReference: {fileID: -1263509875867978938, guid: b49b530bb11b017c5987579c8978aea0, type: 3}
+    - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -92,8 +96,59 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.019079626
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2721090665785645016, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1316268896372067836}
+    - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 158953846014211780}
   m_SourcePrefab: {fileID: 100100000, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+--- !u!212 &956837900327354401 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+  m_PrefabInstance: {fileID: 5458049633830106239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1065988276728226282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+  m_PrefabInstance: {fileID: 5458049633830106239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1316268896372067836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065988276728226282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf0d5683326cd448bdc22f77f227d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 956837900327354401}
+  Sprites:
+  - {fileID: -1263509875867978938, guid: b49b530bb11b017c5987579c8978aea0, type: 3}
+  - {fileID: 8530060782365203640, guid: 65f20a0f2ae71916da9d566dfa1a7b46, type: 3}
+--- !u!114 &158953846014211780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065988276728226282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b22975ccabcaa64f8bc228059e36987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversions:
+  - type: CoffePart
+    thisStateOut: 0
+    thisStateIn: 0
+    otherStateIn: 0
+    otherStateOut: 1

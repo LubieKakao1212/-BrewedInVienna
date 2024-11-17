@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2459983876206232621}
+    - targetCorrespondingSourceObject: {fileID: 5005123756582573461, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5950481442113451035}
   m_SourcePrefab: {fileID: 100100000, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
 --- !u!1 &4709356917605069314 stripped
 GameObject:
@@ -102,6 +105,24 @@ MonoBehaviour:
   - {fileID: 5819453012821907045, guid: f6898071cfb62d5538607073cf19f896, type: 3}
   - {fileID: -2323417596345246464, guid: 247b71a3776bc5cf1a68263f0c9e776e, type: 3}
   - {fileID: 4179687648656066973, guid: beffd5169b21ba87380cf1f99c30f76c, type: 3}
+--- !u!114 &5950481442113451035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4709356917605069314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b22975ccabcaa64f8bc228059e36987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversions:
+  - type: Tamper
+    thisStateOut: 2
+    thisStateIn: 1
+    otherStateIn: 0
+    otherStateOut: 0
 --- !u!212 &4816184851794858953 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5114325806503457886, guid: c7ca92188de57e748ae2b2bff0195665, type: 3}
