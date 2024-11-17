@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      npcstiing2idle_0022_0: -8653338939214864184
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
