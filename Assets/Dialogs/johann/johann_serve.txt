@@ -1,0 +1,8 @@
+johann|
+<color=#329977><i>Here’s your (coffee), Herr Johann. Let me know if it’s brewed to your satisfaction.</i></color>|
+<color=#93ada5><i>(Takes the cup with a nod of appreciation, studying it as if it’s an ancient artifact)</i></color>|
+<color=#7186a8><i>Thank you. It’s funny, isn’t it? A simple cup of coffee, yet it can contain an entire world if one dares to look closely.</i></color>|
+-><color=#329977>Well, I hope this one contains the inspiration you’re looking for.</color>|
+-><color=#329977>Every cup has its own story, just like every customer who visits us.</color>|
+-><color=#329977>Perhaps that’s the magic of coffee—it reflects what we bring to it.</color>|
+johann_end
