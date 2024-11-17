@@ -8,7 +8,7 @@ public class CoffeeMachine : SnappingDrop {
     public override void OnDrop(Drag drag) {
         base.OnDrop(drag);
         if (drag.Type == cupObjType) {
-            Collider2D[] hits = Physics2D.OverlapPointAll();
+            Collider2D[] hits = Physics2D.OverlapPointAll(DragManager.MousePositionWorld);
 
             foreach (var hit in hits) {
                 var drag2 = hit.GetComponent<Drag>();

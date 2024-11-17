@@ -10,17 +10,21 @@ public class MilkMetalCupDrop : Drop {
     private List<Conversion> conversions;
 
     public override void OnDrop(Drag drag) {
-        var conversion = conversions.Find((c) => c.type == drag.Type);
-
+        var state = GetComponent<StateBehaviour>();
+        var otherState = drag.GetComponent<StateBehaviour>();
+        var conversion = conversions.Find(c => state.CurrentState == c.thisStateIn && c.type == drag.Type && otherState.CurrentState == c.otherStateIn);
+        
         if (conversion != null) {
-            GetComponent<StateBehaviour>().SetState(conversion.state);
+            state.SetState(conversion.thisStateOut);
         }
     }
 
     [Serializable]
     public class Conversion {
         public string type;
-        public int state;
+        public int thisStateOut;
+        public int thisStateIn;
+        public int otherStateIn;
     }
 }
 
