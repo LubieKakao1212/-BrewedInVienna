@@ -1,0 +1,8 @@
+greta|
+<color=#93ada5><wave>Eh, fine</wave></color>|
+<color=#7186a8><i>As I'm currently wirting a novel set in a cafe, so I have the highest hopes this will inspires me greatly</i></color>|
+<color=#7186a8><i>Don't you dare to disappoint me again!</i></color>|
+-><color=#329977>Ma'am yes ma'am!</color>|
+-><color=#329977>I'll try to assist you as much as I can</color>|
+-><color=#329977>So what will it be?</color>|
+greta_decision
