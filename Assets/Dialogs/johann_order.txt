@@ -1,0 +1,9 @@
+Johann|
+<color=gray><i>Johann looks up, pausing as if the question holds profound meaning</color></i>|
+Hmm... what do I <wave amplitude=0.5>feel</wave> like today? Such a simple question, yet it demands one to assess their entire mood.|
+<color=gray><i>He leans back, tapping his temple with a pencil.</color></i>
+What would you recommend to a man wrestling with the <wave amplitude=0.5>paradox</wave> of beauty and despair?|
+-><color=silver>Perhaps a (coffee), Herr Johann? Sometimes, a simple choice can offer clarity amidst the chaos|
+-><color=silver>(coffee) might suit you today—a steady companion for your contemplations|
+-><color=silver>If you’re seeking solace, maybe a (coffee)—it pairs well with thoughtful company like yours.”|
+JohannOrder2
