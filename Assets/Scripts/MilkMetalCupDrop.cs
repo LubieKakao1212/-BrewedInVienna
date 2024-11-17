@@ -16,6 +16,7 @@ public class MilkMetalCupDrop : Drop {
         
         if (conversion != null) {
             state.SetState(conversion.thisStateOut);
+            otherState.SetState(conversion.otherStateOut);
         }
     }
 
@@ -25,6 +26,7 @@ public class MilkMetalCupDrop : Drop {
         public int thisStateOut;
         public int thisStateIn;
         public int otherStateIn;
+        public int otherStateOut;
     }
 }
 
