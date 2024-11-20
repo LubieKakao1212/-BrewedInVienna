@@ -371,8 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceptedStates: 010000000200000004000000
-  GameScene:
-    m_Handle: 0
+  GameScene: 0
   CoffeCounter: 0
 --- !u!4 &273975876
 Transform:
@@ -605,7 +604,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -4
   m_Sprite: {fileID: 1368361414651625473, guid: 26c9c3fedd7e8e846a9319cc6acaf900, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

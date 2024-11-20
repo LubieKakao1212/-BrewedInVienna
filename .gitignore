@@ -4,3 +4,5 @@ Temp/
 UserSettings/
 obj/
 Assembly-CSharp-firstpass.csproj
+build/
+buildWGL/
